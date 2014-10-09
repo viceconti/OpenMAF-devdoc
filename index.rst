@@ -4,25 +4,24 @@
 
 .. |latex| replace:: :math:`LaTeX`
 
-############################
-Welcome to OpenMAF Template!
-############################
+#####################
+OpenMAF documentation
+#####################
 
 .. sidebar:: Summary
 
-    :Name: **project**
-    :Release: |release|
-    :version: |version| 
-    :Date: |today|
-    :Authors: **Nicolas Gruel**
-    :Target: developers
-    :status: draft
+   :Name: **project**
+   :Release: |release|
+   :version: |version| 
+   :Date: |today|
+   :Authors: **Nicolas Gruel**
+   :Target: developers
+   :status: draft
 
 .. topic:: OpenMAF Documentation
 
-    * OpenMAF official documents
-    * Documentation
-    * Template
+   * OpenMAF official documents
+   * Documentation
 
 .. toctree::
    :maxdepth: 2
@@ -32,6 +31,15 @@ Welcome to OpenMAF Template!
    scope
    acronyms
 
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+
+   About MAF<src/about_maf.rst>
+   Programmer documentation<src/programmer_doc.rst>
+   Maintaining MAF2<src/maintaining_maf2.rst>
+   Developing MAF3<src/developing_maf3.rst>
+   
 ..	Modules/index
 
 
