@@ -31,7 +31,8 @@ sys.path.append(os.path.abspath('sphinxext'))
 extensions = [  # 'rst2pdf.pdfbuilder',
               'sphinx.ext.todo',
               'sphinx.ext.coverage',
-              'sphinx.ext.pngmath',
+              #'sphinx.ext.pngmath',
+              'sphinx.ext.mathjax',
               'sphinx.ext.autodoc',
               'numpydoc',
               'sphinx.ext.doctest',
@@ -59,7 +60,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'OpenMAF template'
+project = u'OpenMAF'
 copyright = u'2014, OpenMAF'
 publisher = u'OpenMAF'
 author = u''
@@ -90,13 +91,16 @@ release = '0.1'
 # for source files.
 exclude_trees = []
 
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+exclude_patterns = ['_build']
+
 # The reST default role (used for this markup: `text`) to use for all documents.
 # default_role = None
 default_role = "autolink"
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 # add_function_parentheses = True
-add_function_parentheses = False
 
 # If true, the current module name will be prepended to all description
 # unit titles (such as .. function::).
@@ -416,8 +420,20 @@ epub_copyright = copyright
 # The format is a list of tuples containing the path and title.
 # epub_post_files = []
 
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
 # The depth of the table of contents in toc.ncx.
 # epub_tocdepth = 3
 
 # Allow duplicate toc entries.
 # epub_tocdup = True
+
+# Choose between 'default' and 'includehidden'.
+#epub_tocscope = 'default'
+
+# Fix unsupported image types using the PIL.
+#epub_fix_images = False
+
+# Scale large images.
+#epub_max_image_width = 0
